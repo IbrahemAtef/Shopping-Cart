@@ -7,27 +7,62 @@
 	</head>
 	<body>
 		<div>
-			<h1 class="header">Shopping Cart</h1>
+			<div class="header">
+				<h1>Shopping Cart</h1>
+			</div>
 			<div class="container">
 			    <div class="first">
-			    	<h1 id="mainMenu">Main Menu</h1>
-					1.List of all products (display only id and name).
-					2.Product details.
-					3.You can enter the name of the product or part of it or the range of price you want to show all products that fit it
-					4.List of products from cart.
-					5.Add product to cart.
-					6.Remove product from cart.
-					7.Empty cart.
-					8.Select one of payment methods.
-		    		<h6>Write the number of the operation you want:-</h6><br> 
+			    	<p>
+			    		<pre><strong id="mainQuestion">Write the number of the operation you want:</strong> <select id="opNum">
+											    <option value="one">1</option>
+											    <option value="two">2</option>
+											    <option value="three">3</option>
+											    <option value="four">4</option>
+											    <option value="five">5</option>
+											    <option value="six">6</option>
+										    </select>
+
+1.List of all products.
+2.You can enter the name of the product or part of it or the range
+of price you want to show all products that fit it.
+3.List of products from cart.
+4.Add product to cart.
+5.Remove product from cart.
+6.Empty cart.
+
+<div class="alertTwo"><span class="closebtn" > </span> 
+<strong>The product has been added successfully</strong> 
+					</div>
+				<button id="go">Go</button>
+			    		<pre>
+			    	</p>
 			    </div>
-			    <!-- <div class="second">2</div>
-			    <div class="third">3</div>
-			    <div class="fourth">4</div>
-			    <div class="fifth">5</div>
-			    <div class="sixth">6</div>
-			    <div class="seventh">7</div>
-			    <div class="eighth">8</div> -->
+
+			    <div class="second">
+			    	<p ><pre id="ask">
+
+<strong id="q">Fill the information bellow:</strong>
+
+<input type="number" id="ft_id" placeholder="Ex: 1000" min="1000" max="1005">
+<input class="inpSearch" type="text" id="tf_word" placeholder="Please put the name of the product or a part of it.">	<input class="inpSearch" type="number" id="tf_low" min="0"placeholder="Ex: 10">	<input class="inpSearch" type="number" id="tf_high" min="0" placeholder="Ex: 100"> </p>
+<div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+<strong>The product has been added successfully</strong> 
+					</div></pre>
+					<div class="third">
+						<button id="search">Search</button>	
+					</div>
+					<div class="third">
+						<button id="add">add</button>
+						<button id="remove">remove</button>
+					</div>
+				    <div class="third"><h2 id="h2">All Products</h2></div><br><br>
+			    	<table id = "tbl">
+					</table>
+					<div class="third">
+						<button id="back">Back</button>	
+					</div>
+			    </div>
+
 			</div>
 		</div>
 		<script type="text/javascript" src="JS.js"></script>
